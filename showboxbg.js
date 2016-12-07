@@ -36,7 +36,7 @@
         }
 
         function showImage(i) {
-            showBoxImage.style.backgroundImage = "url('" + images[i].src.replace("800", "1600") + "')";
+            showBoxImage.style.backgroundImage = "url('" + images[i].src.replace("small", "big") + "')";
             showBoxWrap.className = "visible";
             buttonNext.onclick = function () {showImage(i < images.length - 1 ? i + 1 : 0)};
             buttonPrev.onclick = function () {showImage(i > 0 ? i - 1 : images.length - 1)};
