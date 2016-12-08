@@ -28,11 +28,10 @@
         showBoxWrap.appendChild(buttonPrev);
 
         for (var i = 0; i < images.length; i++) {
-            (function (i) {
-                images[i].onclick = function () {
-                    showImage(i);
-                };
-            })(i);
+            images[i].i = i; //save the number of an image in the array
+            images[i].onclick = function () {
+                showImage(this.i);
+            };
         }
 
         function showImage(i) {
